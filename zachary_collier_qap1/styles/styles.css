@@ -1,0 +1,287 @@
+/* 
+  AUTHOR: Zachary Collier
+  START DATE: September 29th 2024
+  FINISH DATE: October 1st 2024
+  ASSIGNMENT: QAP1
+  VEHICLE: Ford Bronco 4 Door Outer Banks SUV 2023
+        
+  END QUESTIONS
+  1. I think the entire thing took around 20-30 hours, on and off? Maybe less.
+  2. I used Noman's Powerpoints, W3Schools HTML and CSS, research on Stack Overflow, Penpot (open-source Figma alternative) for very basic layout visualization, Openverse for audio, Flickr for images.
+  3. I did not need assistance from fellow classmates.
+  4. I did not need assistance from instructors, though the lectures after the QAP document's posting really facilitated the process.
+  5. I'd rate the process a 2/5 in difficulty. Nothing was too difficult, other than how finnicky CSS can be. The grid method significantly eased that difficulty. Otherwise, the hardest parts were brainstorming what to write about and combing through creative commons for suitable images. I definitely think I could use these same techniques in future projects.
+
+  AUTHOR'S NOTES: Surprised at how interested I was during the research process. Not much of a car guy, but researching the Bronco gave me a newfound appreciation for vehicles.
+  */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+}
+
+.grid-container-all {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(1em auto);
+  gap: 0;
+}
+
+figcaption {
+  font-size: 0.75em;
+  text-align: center;
+}
+
+header {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  background-color: darkblue;
+  color: lightgray;
+  border: 1px solid black;
+}
+
+nav {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: darkgray;
+  border: 1px solid black;
+}
+
+main {
+  grid-column-start: 2;
+  grid-column-end: -1;
+  background-color: gainsboro;
+  border: 1px solid black;
+}
+
+footer {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  background-color: dimgray;
+  text-align: right;
+  padding: 2em;
+  color: whitesmoke;
+  border: 1px solid black;
+}
+
+article {
+  padding: 2em;
+}
+
+article > p {
+  text-indent: 1em;
+  padding-top: 1em;
+}
+
+article > h2 {
+  padding-top: 1em;
+}
+
+article > ul {
+  padding-top: 1em;
+  padding-left: 2em;
+}
+
+.grid-container-header {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(1em auto);
+}
+
+.grid-container-header > figure > img {
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.grid-container-header > span {
+  grid-column-start: 2;
+  grid-column-end: -2;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+  border: 1px solid black;
+}
+
+.grid-container-nav {
+  display: grid;
+  list-style: none;
+  justify-items: center;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.grid-container-nav > div {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  width: 100%;
+  text-align: center;
+  background-color: steelblue;
+  border: 1px solid black;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: lightgray;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: lightgray;
+}
+
+nav a:hover {
+  color: mediumseagreen;
+}
+
+header a:link {
+  color: lightgray;
+}
+
+header a:visited {
+  color: lightgray;
+}
+
+header a:hover {
+  color: mediumseagreen;
+}
+
+main a:link {
+  color: dimgray;
+}
+
+main a:visited {
+  color: dimgray;
+}
+
+main a:hover {
+  color: mediumseagreen;
+}
+
+article > blockquote {
+  padding-left: 3em;
+  padding-top: 1em;
+}
+
+.grid-container-video {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(10px auto);
+  justify-items: center;
+  padding-top: 1em;
+}
+
+.grid-container-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  padding-top: 1em;
+  justify-items: center;
+}
+
+.grid-container-two-column > ul {
+  padding-top: 1em;
+  padding-left: 2em;
+  justify-self: left;
+}
+
+.grid-container-two-column > figure {
+  width: 100%;
+}
+
+.grid-container-two-column > figure > img {
+  width: 100%;
+}
+
+.audio-box > figcaption {
+  text-align: left;
+}
+
+table,
+th,
+td {
+  padding: 0.2em 1em;
+  border-collapse: collapse;
+}
+
+table > caption {
+  padding-bottom: 0.3em;
+  font-size: 0.9em;
+}
+
+table {
+  border: 1px solid black;
+}
+
+th {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px dashed black;
+}
+
+td {
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+.table-container {
+  transform: translateX(+10vw);
+  width: 75%;
+}
+
+thead {
+  font-size: 1.2em;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+iframe {
+  width: 400px;
+  height: 270px;
+}
+
+@media (max-width: 600px) {
+  nav {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+  main {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+  article {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .table-container {
+    transform: translateX(-0em);
+    width: 100%;
+  }
+  iframe {
+    width: 300px;
+    height: 210px;
+  }
+  .grid-container-header > span {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+  .grid-container-header > figure {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+@media (max-width: 370px) {
+  .table-container {
+    transform: translateX(-0.5em);
+  }
+}
